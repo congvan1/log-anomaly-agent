@@ -25,8 +25,8 @@ Or via Makefile / Docker:
 
 ```bash
 make demo            # = pipeline incident
-make test            # run the automated tests
-docker compose run --rm agent   # run in a container
+make test            # run the automated tests (no pytest required)
+docker compose run --rm agent     # run in a container (or: docker-compose run --rm agent)
 ```
 
 Enable Claude-powered root-cause analysis (optional):
@@ -96,7 +96,9 @@ non-noisy reports.
 ## 4. Automated test flow
 
 ```bash
-make test           # or: python3 -m pytest -q
+make test                          # pytest if installed, otherwise a stdlib runner
+python3 tests/test_detector.py     # zero-dependency: runs without pytest
+python3 -m pytest -q               # if you prefer pytest (pip install pytest)
 ```
 
 Testing principles (`tests/test_detector.py`):

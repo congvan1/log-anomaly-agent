@@ -15,8 +15,10 @@ normal:         ## Run pipeline in NORMAL mode (expect: no P1)
 	$(PY) -m src.pipeline --scenario normal --save-log sample_output/app_normal.log \
 		--html sample_output/report_normal.html --json sample_output/report_normal.json
 
-test:           ## Run the automated test suite
-	$(PY) -m pytest -q
+test:           ## Run the automated test suite (pytest if available, else stdlib runner)
+	@$(PY) -c "import pytest" 2>/dev/null \
+		&& $(PY) -m pytest -q \
+		|| (echo "pytest not installed — using stdlib runner" && $(PY) tests/test_detector.py)
 
 report:         ## Open the latest HTML report (macOS)
 	open sample_output/report.html

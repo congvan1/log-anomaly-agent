@@ -4,7 +4,8 @@ Principles for testing anomaly detection:
   - When simulating INCIDENT -> the detector MUST catch the right failure types.
   - When simulating NORMAL   -> the detector MUST NOT raise P1 (avoid false positives).
 
-Run: pytest -q   (or: python -m pytest)
+Run with pytest:           pytest -q   (or: python -m pytest)
+Run with stdlib only:      python tests/test_detector.py   (no pytest needed)
 """
 
 import os
@@ -93,3 +94,27 @@ def test_parser_extracts_fields():
     assert rec.service == "payment"
     assert rec.status == 502
     assert rec.duration_ms == 30000
+
+
+# ---------- stdlib runner (so tests work WITHOUT pytest) ----------
+def _run_standalone() -> int:
+    tests = sorted((n, f) for n, f in globals().items()
+                   if n.startswith("test_") and callable(f))
+    passed = failed = 0
+    for name, fn in tests:
+        try:
+            fn()
+            print(f"  PASS  {name}")
+            passed += 1
+        except AssertionError as exc:
+            print(f"  FAIL  {name}: {exc}")
+            failed += 1
+        except Exception as exc:  # noqa: BLE001
+            print(f"  ERROR {name}: {exc.__class__.__name__}: {exc}")
+            failed += 1
+    print(f"\n{passed} passed, {failed} failed")
+    return 1 if failed else 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(_run_standalone())
