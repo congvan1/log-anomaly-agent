@@ -1,0 +1,11 @@
+# Run:  docker compose run --rm agent
+# Reports are written to ./sample_output on the host.
+services:
+  agent:
+    build: .
+    environment:
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+      ANOMALY_MODEL: ${ANOMALY_MODEL:-claude-haiku-4-5-20251001}
+    volumes:
+      - ./sample_output:/app/sample_output
+    command: ["--scenario", "incident", "--save-log", "sample_output/app_incident.log"]

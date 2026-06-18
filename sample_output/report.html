@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Log Anomaly Report</title></head>
+<body style="font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:960px;
+margin:24px auto;padding:0 16px;color:#222">
+  <h1 style="margin-bottom:4px">🔍 Log Anomaly Detection Report</h1>
+  <div style="color:#777;font-size:13px">Generated 2026-06-18 02:37:37 UTC · Analysis: ⚙️ Rule/stat fallback (LLM off)</div>
+
+  <div style="display:flex;gap:12px;margin:16px 0;flex-wrap:wrap">
+    <div style="flex:1;min-width:120px;background:#fff;border:1px solid #eee;border-radius:8px;padding:12px">
+      <div style="font-size:28px;font-weight:700">8</div><div style="color:#777">Total anomalies</div></div>
+    <div style="flex:1;min-width:120px;background:#fff;border:1px solid #d32f2f;border-radius:8px;padding:12px">
+      <div style="font-size:28px;font-weight:700;color:#d32f2f">4</div><div style="color:#777">P1 (critical)</div></div>
+    <div style="flex:1;min-width:120px;background:#fff;border:1px solid #f57c00;border-radius:8px;padding:12px">
+      <div style="font-size:28px;font-weight:700;color:#f57c00">4</div><div style="color:#777">P2 (high)</div></div>
+    <div style="flex:1;min-width:120px;background:#fff;border:1px solid #eee;border-radius:8px;padding:12px">
+      <div style="font-size:28px;font-weight:700">14719</div><div style="color:#777">Log lines scanned</div></div>
+  </div>
+
+  <div style="background:#eef6ff;border-left:4px solid #1976d2;padding:12px 16px;border-radius:6px;margin:12px 0">
+    <strong>Executive summary:</strong> Detected 8 anomalies (4 at P1). Recommendations generated from the static knowledge base (LLM disabled).
+  </div>
+
+  <h3>📈 Error count per 30s window</h3>
+  <svg viewBox="0 0 720 140" width="100%" preserveAspectRatio="xMidYMid meet" style="background:#fafafa;border:1px solid #eee;border-radius:8px"><line x1="24" y1="24" x2="24" y2="116" stroke="#ccc"/><line x1="24" y1="116" x2="696" y2="116" stroke="#ccc"/><text x="24" y="14" font-size="11" fill="#666">max=224</text><polyline fill="none" stroke="#d32f2f" stroke-width="2" points="24.0,116.0 35.4,116.0 46.8,116.0 58.2,116.0 69.6,116.0 80.9,116.0 92.3,116.0 103.7,116.0 115.1,116.0 126.5,116.0 137.9,116.0 149.3,116.0 160.7,116.0 172.1,116.0 183.5,116.0 194.8,116.0 206.2,116.0 217.6,116.0 229.0,116.0 240.4,116.0 251.8,116.0 263.2,116.0 274.6,116.0 286.0,116.0 297.4,116.0 308.7,116.0 320.1,113.9 331.5,25.6 342.9,27.3 354.3,29.8 365.7,26.1 377.1,24.8 388.5,34.7 399.9,29.8 411.3,24.0 422.6,36.7 434.0,28.9 445.4,30.2 456.8,27.7 468.2,114.8 479.6,116.0 491.0,116.0 502.4,116.0 513.8,116.0 525.2,116.0 536.5,116.0 547.9,116.0 559.3,116.0 570.7,116.0 582.1,116.0 593.5,116.0 604.9,116.0 616.3,116.0 627.7,116.0 639.1,116.0 650.4,116.0 661.8,116.0 673.2,116.0 684.6,116.0 696.0,116.0"/></svg>
+  <h3>⏱ Latency p95 (ms) per window</h3>
+  <svg viewBox="0 0 720 140" width="100%" preserveAspectRatio="xMidYMid meet" style="background:#fafafa;border:1px solid #eee;border-radius:8px"><line x1="24" y1="24" x2="24" y2="116" stroke="#ccc"/><line x1="24" y1="116" x2="696" y2="116" stroke="#ccc"/><text x="24" y="14" font-size="11" fill="#666">max=30000</text><polyline fill="none" stroke="#1976d2" stroke-width="2" points="24.0,115.7 35.4,115.7 46.8,115.7 58.2,115.7 69.6,115.7 80.9,115.7 92.3,115.7 103.7,115.7 115.1,115.7 126.5,115.7 137.9,115.7 149.3,115.7 160.7,115.7 172.1,115.7 183.5,115.7 194.8,115.7 206.2,115.7 217.6,115.7 229.0,115.7 240.4,115.7 251.8,115.7 263.2,115.7 274.6,115.7 286.0,115.7 297.4,115.7 308.7,115.7 320.1,115.6 331.5,24.0 342.9,24.0 354.3,24.0 365.7,24.0 377.1,24.0 388.5,24.0 399.9,24.0 411.3,24.0 422.6,24.0 434.0,24.0 445.4,24.0 456.8,24.0 468.2,115.6 479.6,115.7 491.0,115.7 502.4,115.7 513.8,115.7 525.2,115.7 536.5,115.7 547.9,115.7 559.3,115.7 570.7,115.7 582.1,115.7 593.5,115.7 604.9,115.7 616.3,115.7 627.7,115.7 639.1,115.7 650.4,115.7 661.8,115.7 673.2,115.7 684.6,115.7 696.0,115.7"/></svg>
+
+  <h3>📋 Details &amp; recommended actions</h3>
+  <table style="border-collapse:collapse;width:100%;font-size:14px" border="0">
+    <thead><tr style="text-align:left;border-bottom:2px solid #eee">
+      <th>Sev</th><th>Issue</th><th>Root cause</th><th>Recommended action</th></tr></thead>
+    <tbody>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#d32f2f;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P1</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">High 5xx rate: 220 requests (43%)  (sustained ~420s, 14 windows)</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">220/507 requests returned 5xx in this window. The incident persisted across 14 windows (~420s).</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:13:00Z · type=<code>http_5xx</code></div>
+            <div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:13:30.725Z [ERROR] api - unhandled exception in request pipeline method=GET path=/api/policy status=503 duration_ms=1530 trace_id=2df6e9</div><div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:13:30.731Z [ERROR] payment - payment gateway timeout after 30000ms method=POST path=/api/payment status=502 duration_ms=30000 trace_id=ead25f</div><div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:13:31.123Z [ERROR] api - unhandled exception in request pipeline method=GET path=/api/policy status=500 duration_ms=952 trace_id=d22f53</div>
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 Identify the failing endpoint; if it started right after a deploy -&gt; rollback; check upstream dependency health.</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#d32f2f;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P1</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">Error spike: 220 errors in 30s  (sustained ~360s, 12 windows)</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">Errors/window = 220 (baseline median=0.0, robust z=0.0). The incident persisted across 12 windows (~360s).</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:13:30Z · type=<code>error_spike</code></div>
+            <div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:13:30.725Z [ERROR] api - unhandled exception in request pipeline method=GET path=/api/policy status=503 duration_ms=1530 trace_id=2df6e9</div><div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:13:30.731Z [ERROR] payment - payment gateway timeout after 30000ms method=POST path=/api/payment status=502 duration_ms=30000 trace_id=ead25f</div><div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:13:31.123Z [ERROR] api - unhandled exception in request pipeline method=GET path=/api/policy status=500 duration_ms=952 trace_id=d22f53</div>
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 Isolate the service with rising errors; check the latest deploy/release and consider a rollback; inspect downstream logs (DB, gateway).</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#d32f2f;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P1</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">OutOfMemory in service &#x27;quote-engine&#x27;</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">Detected critical pattern &#x27;OutOfMemory&#x27;. This is typically a P1 needing immediate action.</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:16:30Z · type=<code>critical_pattern</code></div>
+            <div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:16:30.000Z [FATAL] quote-engine - java.lang.OutOfMemoryError: Java heap space trace_id=343663</div>
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 Handle as P1 now: for OOM increase heap / find the memory leak; pool exhausted -&gt; raise size / fix connection leaks; controlled restart.</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#d32f2f;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P1</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">Service &#x27;policy&#x27; stopped logging</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">Service &#x27;policy&#x27; logged earlier but went completely silent in the final quarter of the timeline — likely dead/hung.</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:22:29Z · type=<code>service_silence</code></div>
+            
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 Check the service liveness/health; see if it crashed/hung/deadlocked; restart and add an alert for missing logs.</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#f57c00;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P2</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">High latency: p95 = 30000ms  (sustained ~360s, 12 windows)</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">p95 latency = 30000ms (baseline median=104ms, z=5041.3). The incident persisted across 12 windows (~360s).</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:13:30Z · type=<code>latency_spike</code></div>
+            
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 Check DB slow queries, connection pool, GC pauses; review CPU/mem dashboards; enable tracing to find the bottleneck.</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#f57c00;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P2</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">New unseen error in &#x27;api&#x27;  (sustained ~60s, 2 windows)</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">A new error signature appeared (not in baseline): unhandled exception in request pipeline The incident persisted across 2 windows (~60s).</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:13:30Z · type=<code>new_error_signature</code></div>
+            <div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:13:30.045Z [ERROR] api - unhandled exception in request pipeline method=GET path=/api/policy status=500 duration_ms=1618 trace_id=a5fd1a</div>
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 New class of error — assign an owner, open a ticket, check recent code/config changes that introduced this signature.</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#f57c00;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P2</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">New unseen error in &#x27;quote-engine&#x27;  (sustained ~60s, 2 windows)</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">A new error signature appeared (not in baseline): java.lang.OutOfMemoryError: Java heap space The incident persisted across 2 windows (~60s).</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:16:30Z · type=<code>new_error_signature</code></div>
+            <div style='font-family:monospace;font-size:12px;color:#444;background:#f5f5f5;padding:4px 6px;margin:2px 0;border-radius:4px;overflow-x:auto'>2026-06-18T09:16:30.000Z [FATAL] quote-engine - java.lang.OutOfMemoryError: Java heap space trace_id=343663</div>
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 New class of error — assign an owner, open a ticket, check recent code/config changes that introduced this signature.</td>
+        </tr>
+        <tr>
+          <td style="vertical-align:top"><span style="background:#f57c00;color:#fff;padding:2px 8px;border-radius:10px;font-size:12px;font-weight:600">P2</span></td>
+          <td style="vertical-align:top">
+            <div style="font-weight:600">Suspected brute-force: 326 x 401/403  (sustained ~180s, 6 windows)</div>
+            <div style="color:#555;font-size:13px;margin:4px 0">326 auth failures in 30s — possible password-guessing attack. The incident persisted across 6 windows (~180s).</div>
+            <div style="color:#888;font-size:12px">⏱ 2026-06-18T09:24:00Z · type=<code>auth_bruteforce</code></div>
+            
+          </td>
+          <td style="vertical-align:top;font-size:13px;max-width:240px">(LLM off) — see the static recommendation above.</td>
+          <td style="vertical-align:top;font-size:13px;max-width:280px">💡 Enable rate-limiting &amp; lockout on /login; block source IPs at the WAF/firewall; enforce MFA; audit access logs.</td>
+        </tr></tbody>
+  </table>
+
+  <p style="color:#999;font-size:12px;margin-top:24px">
+    Generated by Log Anomaly Agent · scenario=<code>incident</code>
+  </p>
+</body></html>

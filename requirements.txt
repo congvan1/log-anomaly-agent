@@ -1,0 +1,5 @@
+# The core pipeline runs entirely on the Python stdlib — nothing required here.
+# The packages below are OPTIONAL enhancements only:
+
+anthropic>=0.40        # (optional) enable Claude-powered root-cause analysis
+pytest>=8.0            # (dev) run the automated test suite
